@@ -11,58 +11,57 @@ public class WordGuesser {
 
     private final static String WRONG_GUESS_PATTERN = "#############";
 
-    private String wordToGuess;
+    private final String wordToGuess;
+    private StringBuilder playerGuess;
     private final String playerName;
 
 
     public WordGuesser(final String playerName) {
         this.playerName = playerName;
+        this.wordToGuess = pickRandomWord();
+        this.playerGuess =  initPlayerGuess(this.wordToGuess);
         launchGame();
     }
 
     private void launchGame() {
-        pickRandomWord();
-        guess();
-    }
-
-    private void guess() {
 
         Scanner scanner = new Scanner(System.in);
 
-        char[] guessedCharacters = new char[wordToGuess.length()];
-
         boolean flag = false;
         while (!flag) {
-            System.out.println("Please enter your guess: ");
-            String playerGuess = scanner.next();
-            flag = checkForGuessedLetters(playerGuess, guessedCharacters);
+            System.out.println("Please enter a word (only lower-case letters): ");
+            flag = checkForGuessedLetters(scanner.nextLine());
         }
-
         scanner.close();
 
     }
 
-    private boolean checkForGuessedLetters(String playerGuess, char[] guessedCharacters) {
+    private boolean checkForGuessedLetters(String playerGuess) {
 
-        if(this.wordToGuess.equals(playerGuess)) {
+        if (playerGuess.equals(this.wordToGuess)) {
+            System.out.println(getName() + ", you've guessed the word - " + this.wordToGuess + ". Congratulations!");
             return true;
         }
 
         for (int i = 0; i < this.wordToGuess.length(); i++) {
             if (playerGuess.charAt(i) == this.wordToGuess.charAt(i)) {
-                guessedCharacters[i] = playerGuess.charAt(i);
-            }
-            else {
-                guessedCharacters[i] = '#';
+                this.playerGuess.setCharAt(i, playerGuess.charAt(i));
             }
         }
+
+        System.out.println("Your guess is wrong, here is a hint: " + this.playerGuess + WRONG_GUESS_PATTERN);
         return false;
     }
 
-    private void pickRandomWord() {
-        int randomIndex = new Random().nextInt(0, WORDS.length - 1);
-        this.wordToGuess = WORDS[randomIndex];
-        System.out.println("A random word has been picked, it's time to guess!");
+    private String pickRandomWord() {
+        int randomIndex = new Random().nextInt(0, WORDS.length);
+        System.out.println("Hi " + this.playerName + ", a random word has been picked for you to guess!");
+        return WORDS[randomIndex];
+    }
+
+    private StringBuilder initPlayerGuess(String playerGuess) {
+        this.playerGuess = new StringBuilder().repeat('#', this.wordToGuess.length());;
+        return this.playerGuess;
     }
 
     private String getName() {
