@@ -1,0 +1,1 @@
+Employee{fullName='Mike', occupation='Chef', email='mike@email.com', age=25, phoneNumber=7512764518, salary=2500}
