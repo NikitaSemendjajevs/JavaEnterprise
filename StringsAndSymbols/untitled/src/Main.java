@@ -2,9 +2,7 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(findSymbolOccurrence("Hello", 'H'));
-        System.out.println(isPalindrome("olol"));
-        System.out.println(stringReverse("Nikita"));
+        System.out.println(findWordPosition("Apollo target", "pollo"));
     }
 
     public static int findSymbolOccurrence(String string, char symbol) {
@@ -18,6 +16,27 @@ public class Main {
     }
 
     public static int findWordPosition(String source, String target) {
+
+        for (int i = 0; i < source.length() - target.length(); i++) {
+
+            int indexOfTarget = 0;
+            int indexOfSource = i;
+            boolean flag = true;
+
+            while (flag) {
+
+                if (source.charAt(indexOfSource) != target.charAt(indexOfTarget)) {
+                    flag = false;
+                }
+                else if (indexOfTarget == target.length() - 1) {
+                    return i;
+                }
+                else {
+                    indexOfTarget++;
+                    indexOfSource++;
+                }
+            }
+        }
         return -1;
     }
 
