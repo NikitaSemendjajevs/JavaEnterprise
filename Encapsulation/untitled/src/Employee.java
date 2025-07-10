@@ -3,7 +3,7 @@ import java.math.BigDecimal;
 
 public class Employee {
 
-    interface Filterable {
+    interface Filter {
         boolean filter(Employee employee);
     }
 
@@ -56,25 +56,24 @@ public class Employee {
 
     public static void filterEmployees(Employee[] employees, int age) {
 
-        class EmployeeFilter implements Filterable {
+        Filter employeeFilter = new Filter() {
 
-            private final int ageParameter;
-
-            EmployeeFilter(final int ageParameter) {
-                this.ageParameter = ageParameter;
-            }
+            private int ageParameter;
 
             @Override
             public boolean filter(Employee employee) {
-                return employee.getAge() >= this.ageParameter;
+                return this.ageParameter <= employee.getAge();
             }
 
-        }
+            private Filter init(int ageParameter) {
+                this.ageParameter = ageParameter;
+                return this;
+            }
 
-        EmployeeFilter filter = new EmployeeFilter(age);
+        }.init(age);
 
         for (Employee employee: employees) {
-            if (filter.filter(employee)) {
+            if (employeeFilter.filter(employee)) {
                 System.out.println(employee);
             }
         }
@@ -96,6 +95,8 @@ public class Employee {
         };
 
         Employee employee = new Employee();
+
+        Employee.filterEmployees(employees, 40);
 
         /*Copies ONE byte at a time (inefficient)
         * try-with-resources block closes a stream automatically */
