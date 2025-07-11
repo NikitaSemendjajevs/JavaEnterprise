@@ -6,6 +6,25 @@ public class Main {
     }
 
     public static int findSymbolOccurrence(String string, char symbol) {
+        int numberOfOccurrence = 0;
+        for (int i = 0, j = string.length() - 1; i < j; i++, j--) {
+            if (string.charAt(i) == symbol) {
+                numberOfOccurrence++;
+            }
+            if (string.charAt(j) == symbol) {
+                numberOfOccurrence++;
+            }
+        }
+
+        if (string.length() % 2 != 0 && string.charAt(string.length() / 2) == symbol) {
+            numberOfOccurrence++;
+        }
+
+        return numberOfOccurrence;
+    }
+
+
+    /*public static int findSymbolOccurrence(String string, char symbol) {
         int symbolOccurrence = 0;
         for (Character ch: string.toCharArray()) {
             if (symbol == ch) {
@@ -13,7 +32,7 @@ public class Main {
             }
         }
         return symbolOccurrence;
-    }
+    }*/
 
     public static int findWordPosition(String source, String target) {
 
