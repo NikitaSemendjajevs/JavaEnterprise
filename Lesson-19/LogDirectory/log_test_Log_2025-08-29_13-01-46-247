@@ -1,0 +1,60 @@
+[Fri, 2025-8-29 at 1:1:46 pm EEST][DEBUG]Message: My name is Nikita!
+[Fri, 2025-8-29 at 1:1:46 pm EEST][INFO]Message: My name is Nikita!
+[Fri, 2025-8-29 at 1:1:46 pm EEST][DEBUG]Message: I'm testing this program.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][INFO]Message: I'm testing this program.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][DEBUG]Message: This is my first log message.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][INFO]Message: This is my first log message.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][DEBUG]Message: Testing log rotation with a larger message.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][INFO]Message: Testing log rotation with a larger message.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][DEBUG]Message: Hello from the FileLogger implementation!
+[Fri, 2025-8-29 at 1:1:46 pm EEST][INFO]Message: Hello from the FileLogger implementation!
+[Fri, 2025-8-29 at 1:1:46 pm EEST][DEBUG]Message: Checking if INFO and DEBUG modes behave correctly.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][INFO]Message: Checking if INFO and DEBUG modes behave correctly.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][DEBUG]Message: Another line to push the file closer to its size limit.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][INFO]Message: Another line to push the file closer to its size limit.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][DEBUG]Message: Logs should create a new file once the limit is exceeded.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][INFO]Message: Logs should create a new file once the limit is exceeded.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][DEBUG]Message: The logging system is now under stress test.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][INFO]Message: The logging system is now under stress test.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][DEBUG]Message: Creating multiple entries to see file growth.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][INFO]Message: Creating multiple entries to see file growth.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][DEBUG]Message: Rotation should happen smoothly without errors.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][INFO]Message: Rotation should happen smoothly without errors.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][DEBUG]Message: Each message is written with UTF-8 encoding.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][INFO]Message: Each message is written with UTF-8 encoding.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][DEBUG]Message: Final test entry for this run of the program.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][INFO]Message: Final test entry for this run of the program.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][DEBUG]Message: Adding more logs to simulate a real application run.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][INFO]Message: Adding more logs to simulate a real application run.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][DEBUG]Message: Error handling is also important to test later.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][INFO]Message: Error handling is also important to test later.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][DEBUG]Message: File rotation count should increase consistently.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][INFO]Message: File rotation count should increase consistently.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][DEBUG]Message: We expect log_test_1 to appear after the first file is full.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][INFO]Message: We expect log_test_1 to appear after the first file is full.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][DEBUG]Message: Message size impacts how quickly the file rotates.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][INFO]Message: Message size impacts how quickly the file rotates.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][DEBUG]Message: Testing very short messages.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][INFO]Message: Testing very short messages.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][DEBUG]Message: Testing very long messages that might fill the file faster than expected.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][INFO]Message: Testing very long messages that might fill the file faster than expected.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][DEBUG]Message: Consistency is crucial for debugging production code.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][INFO]Message: Consistency is crucial for debugging production code.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][DEBUG]Message: Developers rely on logs to trace issues.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][INFO]Message: Developers rely on logs to trace issues.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][DEBUG]Message: Performance impact of logging should be minimal.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][INFO]Message: Performance impact of logging should be minimal.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][DEBUG]Message: UTF-8 encoding ensures international characters work: Привет!
+[Fri, 2025-8-29 at 1:1:46 pm EEST][INFO]Message: UTF-8 encoding ensures international characters work: Привет!
+[Fri, 2025-8-29 at 1:1:46 pm EEST][DEBUG]Message: Time-based rotation can be added as a future improvement.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][INFO]Message: Time-based rotation can be added as a future improvement.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][DEBUG]Message: Currently, rotation is based only on file size.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][INFO]Message: Currently, rotation is based only on file size.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][DEBUG]Message: We are logging at INFO level now.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][INFO]Message: We are logging at INFO level now.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][DEBUG]Message: Switching to DEBUG should include both INFO and DEBUG outputs.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][INFO]Message: Switching to DEBUG should include both INFO and DEBUG outputs.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][DEBUG]Message: This message should appear in both log levels when DEBUG is set.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][INFO]Message: This message should appear in both log levels when DEBUG is set.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][DEBUG]Message: End of the 30 test log messages.
+[Fri, 2025-8-29 at 1:1:46 pm EEST][INFO]Message: End of the 30 test log messages.

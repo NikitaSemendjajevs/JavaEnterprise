@@ -1,4 +1,6 @@
 package Logger;
 
-public class LoggingLevel {
+public enum LoggingLevel {
+    INFO,
+    DEBUG
 }
